@@ -3,7 +3,7 @@ import { readFileSync } from "fs";
 import { createResolvers } from "./resolvers";
 import path from "path";
 import { createGithubGW } from "./github";
-import config from "./../config.json";
+import config from "../config/config.json";
 
 const main = () => {
   const github = createGithubGW(config.github.username, config.github.token);

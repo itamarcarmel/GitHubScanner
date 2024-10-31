@@ -5,20 +5,31 @@ A Graphql server app which scans a github account
 ## Table of Contents
 
 - [Installation](#installation)
+- [Running](#running)
 - [TODO](#TODO)
 
 ## Installation
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/username/project-name.git
+    git clone https://github.com/itamarcarmel/GitHubScanner.git
     ```
 2. Install dependencies:
     ```bash
-    cd project-name
     npm install
     ```
-3. Set up environment variables (if any).
+3. Build project:
+    ```bash
+    npm run build
+    ```
+
+## Running
+
+1. Run the server:
+    ```bash
+    npm run run
+    ```
+2. Open http://localhost:4000/ on browser (it will redirect to Apollo sandbox)
 
 ## TODO
 

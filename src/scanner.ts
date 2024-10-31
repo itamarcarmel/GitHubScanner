@@ -1,18 +1,14 @@
 import _ from "lodash";
 import { GithubRepoGW } from "./github";
-import config from "./../config.json";
+import config from "./../config/config.json";
 import * as uuid from "uuid";
 
 export interface IBlobHandler {
   handle: (path: string) => void;
-  finalize: () => Promise<void>;
   break: () => boolean;
 }
 
-export const ghBFSScan = async (
-  github: GithubRepoGW,
-  bh: Pick<IBlobHandler, "handle" | "break">
-) => {
+export const ghBFSScan = async (github: GithubRepoGW, bh: IBlobHandler) => {
   const paths = [""];
   let requestCounter = 0;
   const id = uuid.v4();
