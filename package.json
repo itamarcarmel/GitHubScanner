@@ -1,0 +1,29 @@
+{
+  "name": "ox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "generate": "graphql-codegen --config codegen.yml",
+    "build": "npm run generate && tsc",
+    "run": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@graphql-codegen/cli": "^5.0.3",
+    "@graphql-codegen/typescript-resolvers": "^4.4.0",
+    "apollo-server": "^3.13.0",
+    "axios": "^1.7.7",
+    "graphql": "^16.9.0",
+    "lodash": "^4.17.21",
+    "uuid": "^11.0.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.13",
+    "@types/node": "^22.8.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

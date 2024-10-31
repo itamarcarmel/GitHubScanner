@@ -1,0 +1,43 @@
+type Repository {
+    name: String!
+    sizeInKB: Int!
+    owner: String!
+}
+
+enum Visibility {
+    PRIVATE
+    PUBLIC
+}
+
+type RandomYamlInfo {
+    content: String!
+    path: String!
+}
+
+type ScanResults {
+    numOfFiles: Int!
+    randomYaml: RandomYamlInfo
+    numOfRequests: Int!
+}
+
+type Webhook {
+    url: String!
+    events: [String!]!
+}
+
+type DetailedRepository {
+    base: Repository!
+    visibility: Visibility!
+    scanResults: ScanResults!
+    webhooks: [Webhook!]!
+}
+
+type ServerConfig {
+  text: String!
+}
+
+type Query {
+    repositories: [Repository!]!
+    repositoryDetails(name: String!, owner: String!): DetailedRepository
+    serverConfig: ServerConfig!
+}

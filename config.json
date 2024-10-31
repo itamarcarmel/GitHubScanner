@@ -1,0 +1,14 @@
+{
+    "github": {
+      "token": "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",
+      "username": "itamarcarmel",
+      "graphqlUrl": "https://api.github.com/graphql",
+      "restUrl": "https://api.github.com"
+    },
+    "scanner": {
+      "concurrency": 2,
+      "yamlExtension": "yaml",
+      "maxScansPerRepo": 2,
+      "sleepIntervalInMS": 1000
+    }
+  }
